@@ -5,4 +5,4 @@
 >2. TypeScript Course
 >3. Angular CLI
 
-## Please go to the branches to see my course
+## Please checkout the branches one-by-one inorder to go to my course
