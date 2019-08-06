@@ -3,72 +3,46 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-root',
   template: `
-    <!-- String interpolation -->
-    <h1>Hello Ajinomoto {{ title }}</h1>
-    <h2>1 + 1 = {{ 1 + 1 }}</h2>
-    <img src = "{{ imageUrl }}"  />
+    <!-- Example 1-->
+    <!--<button (click)="onSave($event)">Save</button> -->
 
-    <!-- property binding -->
-    <h1 [textContent] = "title"></h1>
-    <img [src] = "imageUrl"/>
-    <img [src] = "imageUrl"/>
+    <!-- Example 2: Change Color -->
+    <!--
+      <div [class.item]="changeItem">Hello Ajinomoto</div>
+      <button (click)="onChangeItem()">{{changeItem ? 'Origin ' : 'Change'}} Color</button>
+    -->
 
-    <!-- Binding target -->
-    <img bind-src = "imageUrl" />
+    <!-- Example 3: on-click -->
+    <button on-click="onSave()">Save</button>
 
-    <!-- Attribute Binding  -->
-    <button [attr.class] = "buttonClasses">Click on me</button>
-    <button [attr.aria-label]="actionName">Click on me</button>
-
-    <!-- class Binding  -->
-    <div class="item special menu">Class Binding</div>
-    <div class="item special menu" [class.item-plugin]="itemPlugin">Class Binding</div>
-
-    <div [ngClass]="{
-          'item': true,
-          'special': true,
-          'menu': true,
-          'item-plugin': itemPlugin
-        }">Class Binding</div>
-
-    <div [ngClass]="listClass">Class Binding</div>
-
-    <!-- Style Binding  -->
-    <div [style.color]="textColor" [style.background]="textBackground">Class Binding</div>
-    <div [style.font-size.em]='1.8'>Class Binding</div>
-
-    <div [ngStyle]="{
-      'font-size': '1.5em',
-      'color': 'violet'
-    }">Class Binding</div>
-
-    <div [ngStyle]="listStyle">Class Binding</div>
-    `,
+  `,
   styleUrls: ['./app.component.css']
 })
 
 export class AppComponent {
-  title = 'Coders-Tokyo';
-  imageUrl = 'https://picsum.photos/200';
+  /*
+  onSave(event ?: MouseEvent) {
+    const targetElem = event.target as HTMLElement;
+    const evtMsg = event ?
+      'Event target is ' + targetElem.textContent : '';
+    console.log(event);
+    console.log('Saved ' + evtMsg);
+    if (event) {
+      event.stopPropagation();
+    }
+  } */
 
-  buttonClasses = 'enable trigger';
-  actionName = 'trigger';
 
-  itemPlugin = true;
+  // Example 2: change Color
+  /*
+  changeItem = true;
+  onChangeItem() {
+    this.changeItem = !this.changeItem;
+  } */
 
-  listClass = {
-    item: true,
-    special: true,
-    menu: true,
-    'item-plugin': this.itemPlugin
-  };
-
-  textColor = 'tomato';
-  textBackground = '#f2f2f2';
-
-  listStyle = {
-    'font-size': '1.5em',
-    color: 'green'
-  };
+  // Example 3: on-click Save
+  onSave() {
+    console.log('Saved');
+  }
 
 }

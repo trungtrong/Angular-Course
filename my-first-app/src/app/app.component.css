@@ -5,3 +5,8 @@ h1 {
 .item-plugin {
   color: lightblue;
 }
+
+.item {
+  color: tomato;
+  font-size: 1.8em;
+}
