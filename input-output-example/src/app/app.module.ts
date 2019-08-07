@@ -2,12 +2,14 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { HelloComponent } from './components/hello/hello.component';
+import { HeroChildComponent } from './Components/hero/hero-child.component';
+import { HeroParentComponent } from './Components/hero/hero-parent.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HelloComponent
+    HeroChildComponent,
+    HeroParentComponent
   ],
   imports: [
     BrowserModule
