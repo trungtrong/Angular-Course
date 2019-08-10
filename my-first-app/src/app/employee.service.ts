@@ -1,26 +1,18 @@
 import { Injectable, OnChanges, Inject } from '@angular/core';
-import { OtherEmployeeService } from './other-employee.service';
+import { HttpClient } from '@angular/common/http';
+import { IEmployee } from './employee';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class EmployeeService {
-  employees = [
-    {id: 1, name: 'Trong', age: 24},
-    {id: 2, name: 'Kim', age: 30},
-    {id: 3, name: 'Long', age: 14},
-    {id: 4, name: 'Tuan', age: 26}
-  ];
+  private _url = '/assets/data/employees.json';
 
-  // inject a dependency into service
-  _otherEmployeeService: OtherEmployeeService;
+  constructor(private http: HttpClient) {}
 
-  constructor( _otherEmployeeService: OtherEmployeeService) {
-    this._otherEmployeeService = _otherEmployeeService;
-  }
-
-  getEmployee() {
-    return this.employees;
+  getEmployees(): Observable<IEmployee[]> {
+    return this.http.get<IEmployee[]>(this._url);
   }
 
 }
