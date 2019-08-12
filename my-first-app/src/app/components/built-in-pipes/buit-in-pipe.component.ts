@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-buit-in-pipe',
+  selector: 'app-built-in-pipe',
   template: `
     <div class="currency-pipe">
       <h2>1-1. CurrencyPipe</h2>
