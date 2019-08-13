@@ -70,7 +70,7 @@ import { Component } from '@angular/core';
     <div class="percent-pipe">
       <h4>{{ 34.126 | percent }}</h4>
       <h4>{{ 0.259 | percent }}</h4>
-      <h4>{{ 3.147 | percent: '2.1-2' }}</h4>
+      <h4>{{ 3.1478 | percent: '2.1-2' }}</h4>
 
     </div>
   `
