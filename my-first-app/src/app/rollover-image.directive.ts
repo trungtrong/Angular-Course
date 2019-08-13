@@ -19,5 +19,4 @@ export class RolloverImageDirective {
   @HostListener('mouseout') onMouseOut() {
     this.el.nativeElement.src = this.config.initial;
   }
-
 }
