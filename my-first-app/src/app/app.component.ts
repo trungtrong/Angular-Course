@@ -1,28 +1,23 @@
-import { Component, DoCheck, AfterContentInit, AfterContentChecked, AfterViewChecked } from '@angular/core';
-import { Panel } from './components/viewChildren-and-contentChildren/panel';
-
+import { Component } from '@angular/core';
 @Component({
   selector: 'app-root',
   template: `
-    <!--1. Life cycle hook-->
+    <!-- 1. apply hightlight directive -->
     <!--
-    <app-article-list></app-article-list> -->
+    <app-hightlight></app-hightlight> -->
 
-    <!-- 2. ViewContent and ViewChildren  -->
+    <!-- 2. Host Listener and Host Binding -->
     <!--
-    <app-panel-list>
-      <app-panel [panel]="p"></app-panel>
-    </app-panel-list> -->
+    <app-card></app-card> -->
 
-    <!-- 3. Exercise01- carousel -->
-    <app-carousel></app-carousel>
+    <!-- Exercise 01 -->
+    <!--
+    <app-multiple-hightlight></app-multiple-hightlight> -->
+
+    <!-- Exercise 02 -->
+    <app-rollover-image></app-rollover-image>
   `,
   styleUrls: ['./app.component.css']
 })
 
-export class AppComponent {
-  p: Panel = new Panel(
-    'A kid threw a lump of cheddar at me',
-    'I thought ‘That’s not very mature’'
-  );
-}
+export class AppComponent {}
