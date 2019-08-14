@@ -1,0 +1,16 @@
+.items {
+  display: inline-block;
+  list-style: none;
+}
+
+.items li {
+  background: #f2f2f2;
+  padding: 5px 5px 5px 0;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.items li .badge {
+  background: #ccc;
+  padding: 5px;
+}
