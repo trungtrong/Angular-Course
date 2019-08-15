@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-department-list',
@@ -26,12 +26,17 @@ export class DepartmentListComponent implements OnInit {
   ];
 
   // inject Router service
-  constructor(private router: Router) { }
+  constructor(private router: Router,
+              private route: ActivatedRoute ) { }
 
   ngOnInit() { }
 
   // Passing parameters to routes in Angular
   onSelect(department) {
-    this.router.navigate(['/departments', department.name.toLowerCase()]);
+    // Way 1
+    // this.router.navigate(['/departments', department.name.toLowerCase()]);
+
+    // Way 2: relative navigation
+    this.router.navigate([department.name.toLowerCase()], {relativeTo: this.route});
   }
 }
