@@ -4,6 +4,6 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 
-export class SimpleService {
-  value = 'hello';
+export class AnimalService {
+  data = 'hello';
 }

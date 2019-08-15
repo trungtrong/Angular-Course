@@ -5,18 +5,17 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { EmployeeListComponent } from './components/employee/employee-list.component';
 import { EmployeeDetailComponent } from './components/employee/employee-detail.component';
-import { from } from 'rxjs';
-import { ChildComponent } from './components/exercise/child.component';
-import { ParentComponent } from './components/exercise/parent.component';
-import { SimpleService } from './components/exercise/simple-service.service';
+
+import { CatComponent } from './components/communicate-between-2-strange-components/cat.component';
+import { DogComponent } from './components/communicate-between-2-strange-components/dog.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     EmployeeListComponent,
     EmployeeDetailComponent,
-    ChildComponent,
-    ParentComponent
+    CatComponent,
+    DogComponent
   ],
   imports: [
     BrowserModule,

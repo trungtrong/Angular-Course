@@ -8,17 +8,15 @@ import { Component } from '@angular/core';
     <app-employee-list></app-employee-list>
     <app-employee-detail></app-employee-detail> -->
 
-    <!-- exercise -->
+    <!-- exercise01-communicate between 2 strange components -->
     <div>
-      <app-parent><app-child></app-child></app-parent>
+      <app-dog></app-dog>
     </div>
     <div>
-      <app-parent><app-child></app-child></app-parent>
+      <app-cat></app-cat>
     </div>
     `,
   styleUrls: ['./app.component.css']
 })
 
-export class AppComponent {
-
-}
+export class AppComponent {}
